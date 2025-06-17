@@ -1,0 +1,565 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    direction: rtl;
+    scroll-behavior: smooth;
+    }
+
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    }  
+ 
+ main {
+    flex: 1;
+    }
+
+.top-bar {
+   direction: ltr;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 3px 5px 5px;
+   background-color: white;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1002;
+   height: 35px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ .name {
+   direction: ltr;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: left;
+    font-family: 'Kalameh' , sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 0.5px;
+    display: block;
+    text-shadow: 2px;
+    }
+
+ .si {
+   color:darkred;
+ }
+
+ .welcoming {
+    position:fixed;
+    top: 14px;
+    right: 15px;
+    background-color: darkred;
+    padding: 10px 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    z-index: 1003;
+    font-family: 'Estedad' , sans-serif;
+    color: rgba(247, 247, 252);
+    font-size: 11px;
+    animation: fadeOut 2s forwards;
+    text-align: center;
+    }
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0; display: none;}
+    }
+
+ .search-bar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    color: rgb(16, 15, 15);
+    font-family: 'Estedad' , sans-serif;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 7px;
+    transition: box-shadow 0.1;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 9px;
+    width: 50%;
+    max-width: 100px;
+    }
+
+ .search-bar input {
+    background-color: rgb(231, 231, 231);
+    direction: rtl;
+    width: 110px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 11px;
+    }
+
+    .search-bar button {
+      opacity: 0.7;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 10px;
+      color: black;       
+      }
+
+   .search-bar:hover {
+    background-color : rgba(242, 242, 242, 0.742);
+    color: black;
+    }
+
+    .search-box2  {
+      font-size: 12px;
+      display: flex;
+      margin: 0 auto;
+      cursor: pointer;
+      text-align: center;
+      color: black;
+      width: 70%;
+      margin-bottom: 20px;
+      border: none;
+    }
+
+    .search-box2 input {
+    background-color: #faf1f1ad;
+    color: black;
+    direction: rtl;
+    border-radius: 4px;
+    width: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    }
+
+    .search-box2 button {
+      opacity: 0.7;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      color: black;     
+      }
+
+   #menu-toggle {
+    display: none;
+    }
+      
+      .hamburger {
+        font-size: 17px;
+        padding-left: 10px;
+        position: fixed;
+        top: 13px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 1001;
+        color: rgb(0, 0, 0);
+      }
+      
+     .side-menu {
+        direction: rtl;
+        font-size: 14px;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        background: rgb(255, 255, 255);
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        z-index: 1000;
+      }
+      
+      .side-menu a {
+        transition: backgroud 0.2s ease;
+        padding: 12px 12px;
+        text-decoration: none;
+        color: rgb(10, 0, 0);
+        border-bottom: 1px solid rgb(0, 0, 0);
+        font-family: 'Estedad' , sans-serif;
+      }
+      
+      .side-menu a:hover {
+        border-radius: 3px;
+        opacity: 0.9;
+        background-color: darkred;
+        color: white;
+      }
+      
+      #menu-toggle:checked + .hamburger + .side-menu {
+        right: 0;
+      }
+     .main-content {
+      transition: filter 0.3s ease;
+      filter: none;
+      width: 800px;
+     }
+     #menu-toggle:checked ~ .main-content {
+      filter: blur(3px);
+     }
+
+ .title-name {
+    font-family: 'Estedad' , sans-serif;
+    font-size: 23px;
+    color: rgb(0, 0, 0);
+    text-align: right;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-right: 17px;
+    }
+
+ footer {
+    padding: 15px;
+    direction: rtl;
+    }
+
+ .footer-part {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: right;
+    margin-top: 1px;
+    }
+
+ .our-insta, .our-phone, .our-address {
+    font-size: 13px;
+    color: rgb(46, 46, 46);
+    display: inline;
+    text-align: right;
+    word-spacing: 3px;
+    }
+ 
+ .icon-part {
+    margin-top: 1px;
+    display: inline;
+    color: rgb(0, 0, 0);
+    }
+
+ .homecard-container {
+  overflow: auto;
+  gap: 15px;
+  margin: 15px 15px;
+  }
+
+ .homecard-container,
+ .homecard-container * {
+  box-sizing: border-box;
+ }
+
+ .homecard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+ }
+
+ .homecard {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+ }
+
+ .homecard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+  transform: translate(0px, -3px);
+ }
+
+ .homecard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 0.07;
+ }
+
+ .homecard:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
+ }
+
+ .homecard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ }
+
+ .homecard-img {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+ }
+
+ .homecard:nth-child(2n) .homecard-img {
+  left: initial;
+  right: 0; 
+ }
+
+ .homecard:hover .homecard-img {
+  transform: scale(1.05) rotate(1deg);
+ }
+
+ .homecard:hover .homecard-bar {
+  width: 70px;
+ }
+
+ .homecard-textbox {
+  direction: rtl;
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  text-align: right;
+ }
+
+ .homecard:nth-child(2n) .homecard-textbox {
+  left: initial;
+  right: 430px;
+ }
+
+ .homecard-textbox::before,
+ .homecard-textbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ff0000bb;
+  background: #fff;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+ }
+
+ .homecard:nth-child(2n) .homecard-textbox::before {
+  display: none;
+ }
+
+ .homecard-textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+ }
+
+ .homecard:nth-child(2n) .homecard-textbox::after {
+  display: block;
+ } 
+
+ .homecard-textbox * {
+  position: relative;
+ }
+
+ .homecard-title {
+  font-family: 'Kalameh' , sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+ }
+
+ .homecard-subtitle {
+  font-family: 'Estedad' , sans-serif;
+  font-size: 12px;
+  padding: 2px 0;
+  color: #888; 
+ }
+
+ .homecard-bar {
+  left: -2px;
+  width: 50px;
+  height: 5px;
+  margin: 8px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+ }
+
+ .homecard .homecard-bar { background-color: darkred; }
+ .homecard::before { background-image: linear-gradient(-70deg, darkred, transparent 50%); }
+ .homecard:nth-child(2n)::before { background-image: linear-gradient(-250deg, darkred, transparent 50%); }
+
+ .homecard-description {
+  font-family: 'Estedad' , sans-serif;
+  font-size: 13px;
+  z-index: 10;
+  color: #424242;
+  height: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+
+ .homecard-tagbox {
+  position: absolute;
+  bottom: 3%;
+  font-size: 12px;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+ }
+
+ .homecard-tag {
+  display: inline-block;
+  background: darkred;
+  color: #d3d3d3;
+  border-radius: 3px 0 0 3px;
+  line-height: 25px;
+  padding: 0 8px 0 21px;
+  position: relative;
+  margin-right: 18px;
+  cursor: default;
+  user-select: none;
+  transition: color 0.2s;
+ }
+
+ .homecard-tag::before {
+  content: '';
+  position: absolute;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  width: 6px;
+  top: 10px;
+ }
+
+ .homecard-tag::after {
+  content: '';
+  position: absolute;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid darkred;
+  border-top: 13px solid transparent;
+  right: -10px;
+  top: 0;
+ }
+
+ .category-container {
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+   opacity: 0.8;
+   display: flex;
+   overflow: auto;
+   gap: 20px;
+   padding: 12px 0;
+   scrollbar-width: none;
+   -webkit-overflow-scrolling: touch;
+   cursor: pointer;
+ }
+ 
+ .category-title {
+   font-family: 'Kalameh' , sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: right;
+ }
+
+ .category-card {
+   flex: 0 0 auto;
+   width: 100px;
+   overflow: auto;
+   padding: 10px 16px;
+   background: #faf1f1;
+   border-radius: 10px;
+   text-align: center;
+   user-select: none;
+   border: 1px solid #ddd;
+   box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+   
+ }
+
+ .category-detail {
+  font-family: 'Estedad' , sans-serif;
+   font-size: 13px;
+   direction: rtl;
+   text-align: right;
+ }
+
+.introductioncard-container {
+  overflow: auto;
+  justify-content: center;
+  position: relative;
+  width: 720px;
+  height: 300px;
+  margin-top: 90px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  background-color: #faf1f1ad;
+  border: 2px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+  }
+
+.introductioncard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+ }
+
+ .introductioncard-container,
+ .introductioncard-container * {
+  box-sizing: border-box;
+ }
+
+ .introductioncard-top {
+  font-family: 'Kalameh' , sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  
+}
+
+.introductioncard-textbox {
+  direction: rtl;
+  opacity: 0.8;
+  position: absolute;
+  top: 10%;
+  bottom: 8%;
+  left: 300px;
+  width: calc(500 - 350px);
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 15px;
+  margin-right: 20px;
+ }
+
+.introductioncard-sub {
+  font-family: 'Estedad' , sans-serif;
+  font-size: 14px;
+}
+
+.introductioncard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ }
